@@ -2,15 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Fall2024 TOEFL Review</title>
+    <title>시험 성적표</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
         }
         table {
             width: 100%;
@@ -18,31 +16,30 @@
             margin-bottom: 20px;
         }
         th, td {
-            border: 1px solid #404040;
+            border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
         }
         th {
-            background-color: #2c2c2c;
+            background-color: #f2f2f2;
             font-weight: bold;
         }
         tr:nth-child(even) {
-            background-color: transparent;
+            background-color: #f9f9f9;
         }
         tr:hover {
-            background-color: #2a2a2a;
+            background-color: #f5f5f5;
         }
         #grade-averages {
             display: none;
             margin-top: 20px;
-            border: 1px solid #404040;
+            border: 1px solid #ddd;
             padding: 15px;
-            background-color: #1a1a1a;
         }
         #toggle-averages {
-            background-color: #45a049;
+            background-color: #4CAF50;
             color: white;
-            border: none;   
+            border: none;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
@@ -53,77 +50,15 @@
             border-radius: 5px;
         }
         #toggle-averages:hover {
-            background-color: #3d8b40;
-        }
-        td:last-child {
-            background-color: #2c2c2c;
-        }
-        th:last-child {
-            background-color: #2c2c2c;
-        }
-        .filter-section {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #2c2c2c;
-            border-radius: 5px;
-        }
-        
-        .filter-section select, .filter-section input {
-            padding: 8px;
-            margin: 5px;
-            background-color: #333;
-            color: #e0e0e0;
-            border: 1px solid #404040;
-            border-radius: 4px;
-        }
-        
-        .stats-table {
-            margin-top: 20px;
-        }
-        
-        .sort-header {
-            cursor: pointer;
-        }
-        
-        .sort-header:hover {
-            background-color: #3c3c3c;
-        }
-        a:hover {
-            background-color: #3d8b40;
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Fall2024 TOEFL Review</h1>
-    <div style="background-color: #2c2c2c; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-        <p style="margin: 5px 0;"><strong>응시일:</strong> 12월 16일(월),17일(화)</p>
-        <p style="margin: 5px 0;"><strong>대상:</strong> G7~G10</p>
-        <p style="margin: 5px 0;"><strong>응시자:</strong> 38명</p>
-        <p style="margin: 5px 0;"><strong>미응시:</strong> 1명, 최여은(9학년)</p>
-        <div style="margin-top: 15px;">
-            <a href="TOEFL_COMPARE.html" 
-               style="display: inline-block; 
-                      padding: 10px 20px; 
-                      background-color: #45a049; 
-                      color: white; 
-                      text-decoration: none; 
-                      border-radius: 4px;
-                      transition: background-color 0.3s;">
-                통계 보기
-            </a>
-        </div>
-    </div>
+    <h1>시험 성적표</h1>
+    <button id="toggle-averages">학년별 평균 보기</button>
     
     <table>
-        <colgroup>
-            <col style="width: 7%">  <!-- 학년 -->
-            <col style="width: 12%"> <!-- 이름 -->
-            <col style="width: 13%"> <!-- R -->
-            <col style="width: 13%"> <!-- L -->
-            <col style="width: 13%"> <!-- S -->
-            <col style="width: 13%"> <!-- W -->
-            <col style="width: 15%"> <!-- TOTAL -->
-        </colgroup>
         <thead>
             <tr>
                 <th>학년</th>
@@ -217,16 +152,7 @@
                 <td>11</td>
                 <td>25</td>
             </tr>
-            <tr>
-                <td>7</td>
-                <td>위여디디야</td>
-                <td>3</td>
-                <td>4</td>
-                <td>0</td>
-                <td>채점중</td>
-                <td>채점중</td>
-            </tr>
-            <!-- 8학년 데이터를 모두 함께 묶기 -->
+            <!-- 8학년 데이터 -->
             <tr>
                 <td>8</td>
                 <td>김다원</td>
@@ -271,42 +197,6 @@
                 <td>9</td>
                 <td>14</td>
                 <td>35</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>박선경</td>
-                <td>8</td>
-                <td>9</td>
-                <td>16</td>
-                <td>14</td>
-                <td>47</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>송주안</td>
-                <td>8</td>
-                <td>7</td>
-                <td>9</td>
-                <td>17</td>
-                <td>41</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>이서현</td>
-                <td>0</td>
-                <td>4</td>
-                <td>13</td>
-                <td>17</td>
-                <td>34</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>이은성</td>
-                <td>0</td>
-                <td>1</td>
-                <td>17</td>
-                <td>14</td>
-                <td>32</td>
             </tr>
             <!-- 9학년 데이터 -->
             <tr>
@@ -426,7 +316,6 @@
                 <td>17</td>
                 <td>39</td>
             </tr>
-
             <!-- 10학년 데이터 -->
             <tr>
                 <td>10</td>
@@ -485,6 +374,26 @@
         </tbody>
     </table>
 
+    <div id="grade-averages">
+        <h2>학년별 평균</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>학년</th>
+                    <th>R 평균</th>
+                    <th>L 평균</th>
+                    <th>S 평균</th>
+                    <th>W 평균</th>
+                    <th>TOTAL 평균</th>
+                    <th>응시자 수</th>
+                </tr>
+            </thead>
+            <tbody id="averages-body">
+                <!-- JavaScript will populate this -->
+            </tbody>
+        </table>
+    </div>
+
     <script>
         const students = [
             {학년: 7, 이름: '이온유', R: 5, L: 7, S: 15, W: 8, TOTAL: 35},
@@ -503,97 +412,4 @@
             {학년: 8, 이름: '신나라', R: 5, L: 7, S: 9, W: 14, TOTAL: 35},
             {학년: 9, 이름: '이시온', R: 14, L: 17, S: 19, W: 17, TOTAL: 67},
             {학년: 9, 이름: '강찬영', R: 28, L: 27, S: 22, W: 25, TOTAL: 102},
-            {학년: 9, 이름: '정시온', R: 25, L: 29, S: 22, W: 17, TOTAL: 93},
-            {학년: 9, 이름: '박건민', R: 10, L: 18, S: 18, W: 20, TOTAL: 66},
-            {학년: 9, 이름: '조하은', R: 25, L: 21, S: 18, W: 22, TOTAL: 86},
-            {학년: 9, 이름: '김예준', R: 3, L: 1, S: 17, W: 14, TOTAL: 35},
-            {학년: 9, 이름: '이강인', R: 1, L: 7, S: 16, W: 14, TOTAL: 38},
-            {학년: 9, 이름: '정도현', R: 8, L: 6, S: 17, W: 17, TOTAL: 48},
-            {학년: 9, 이름: '김민지', R: 8, L: 11, S: 14, W: 17, TOTAL: 50},
-            {학년: 9, 이름: '백나빈', R: 20, L: 23, S: 23, W: 22, TOTAL: 88},
-            {학년: 9, 이름: '이예환', R: 21, L: 16, S: 19, W: 22, TOTAL: 78},
-            {학년: 9, 이름: '최주안', R: 20, L: 9, S: 22, W: 20, TOTAL: 71},
-            {학년: 9, 이름: '김도현', R: 3, L: 4, S: 15, W: 17, TOTAL: 39},
-            {학년: 10, 이름: '최효주', R: 10, L: 16, S: 18, W: 17, TOTAL: 61},
-            {학년: 10, 이름: '김효인', R: 20, L: 25, S: 19, W: 22, TOTAL: 86},
-            {학년: 10, 이름: '황준서', R: 1, L: 6, S: 16, W: 14, TOTAL: 37},
-            {학년: 10, 이름: '구준모', R: 21, L: 15, S: 14, W: 20, TOTAL: 70},
-            {학년: 10, 이름: '최주원', R: 8, L: 6, S: 18, W: 14, TOTAL: 46},
-            {학년: 10, 이름: '오윤', R: 3, L: 7, S: 22, W: 14, TOTAL: 46},
-        ];
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const tableBody = document.querySelector('tbody');
-            const statsBody = document.getElementById('stats-body');
-            
-            // Sort functionality
-            document.querySelectorAll('th').forEach(header => {
-                header.classList.add('sort-header');
-                header.addEventListener('click', () => {
-                    const column = header.textContent;
-                    sortTable(column);
-                });
-            });
-
-            function sortTable(column) {
-                const sortedStudents = [...students].sort((a, b) => {
-                    if (column === '학년') return a[column] - b[column];
-                    if (column === '이름') return a[column].localeCompare(b[column]);
-                    return b[column] - a[column];
-                });
-                renderTable(sortedStudents);
-            }
-
-            // Statistics calculation
-            function calculateStats(data, field) {
-                const values = data.map(s => s[field]).filter(v => !isNaN(v));
-                const avg = values.reduce((a, b) => a + b, 0) / values.length;
-                const variance = values.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / values.length;
-                const stdDev = Math.sqrt(variance);
-                
-                return {
-                    average: avg.toFixed(1),
-                    variance: variance.toFixed(1),
-                    stdDev: stdDev.toFixed(1),
-                    count: values.length
-                };
-            }
-
-            function updateStats(data) {
-                const grades = [...new Set(data.map(s => s.학년))].sort((a, b) => a - b);
-                let statsHTML = '';
-                
-                grades.forEach(grade => {
-                    const gradeData = data.filter(s => s.학년 === grade);
-                    const fields = ['R', 'L', 'S', 'W', 'TOTAL'];
-                    
-                    // Add average row
-                    const averages = fields.map(field => calculateStats(gradeData, field).average);
-                    statsHTML += `
-                        <tr>
-                            <td rowspan="2">${grade}</td>
-                            <td>평균</td>
-                            ${averages.map(v => `<td>${v}</td>`).join('')}
-                            <td rowspan="2">${gradeData.length}</td>
-                        </tr>
-                    `;
-                    
-                    // Add standard deviation row
-                    const stdDevs = fields.map(field => calculateStats(gradeData, field).stdDev);
-                    statsHTML += `
-                        <tr>
-                            <td>표준편차</td>
-                            ${stdDevs.map(v => `<td>${v}</td>`).join('')}
-                        </tr>
-                    `;
-                });
-                
-                statsBody.innerHTML = statsHTML;
-            }
-
-            // Initial render with all data
-            updateStats(students);
-        });
-    </script>
-</body>
-</html>
+            {학년: 9, 이름: '정시온', R: 25, L: 29, S: 22, W: 17
